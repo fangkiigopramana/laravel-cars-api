@@ -56,7 +56,8 @@ class CarController extends Controller
     public function store(StoreCarRequest $request)
     {
         $data = Car::create($request->all());
-        return CarResource::collection($data);
+        return "masuk";
+        // return CarResource::collection($data);
     }
 
     /**

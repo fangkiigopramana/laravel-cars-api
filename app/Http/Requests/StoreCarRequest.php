@@ -26,18 +26,18 @@ class StoreCarRequest extends FormRequest
         return [
             'type_id' => ['required'],
             'car_name' => ['required'],
-            'price' => ['required','number'],
-            'combustion_power' => ['required','number'],
+            'price' => ['required'],
+            'combustion_power' => ['required'],
             'type_fuel' => ['required'],
             'transmition' => ['required'],
             'spesification' => ['required'],
             'address' => ['required'],
             'color' => ['required'],
-            'width' => ['required','number'],
-            'weight' => ['required','number'],
+            'width' => ['required'],
+            'weight' => ['required'],
             'upholstery' => ['required'],
-            'length' => ['required','number'],
-            'height' => ['required','number'],
+            'length' => ['required'],
+            'height' => ['required'],
             'max_speed' => ['required']
         ];
     }
