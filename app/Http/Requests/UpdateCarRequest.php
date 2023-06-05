@@ -23,8 +23,44 @@ class UpdateCarRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
-        ];
+        $method = $this->method();
+
+        if ($method == 'PUT'){
+            return [
+                'type_id' => ['required'],
+                'car_name' => ['required'],
+                'price' => ['required'],
+                'combustion_power' => ['required'],
+                'type_fuel' => ['required'],
+                'transmition' => ['required'],
+                'spesification' => ['required'],
+                'address' => ['required'],
+                'color' => ['required'],
+                'width' => ['required'],
+                'weight' => ['required'],
+                'upholstery' => ['required'],
+                'length' => ['required'],
+                'height' => ['required'],
+                'max_speed' => ['required']
+            ];
+        } else {
+            return [
+                'type_id' => ['sometimes', 'required'],
+                'car_name' => ['sometimes', 'required'],
+                'price' => ['sometimes', 'required'],
+                'combustion_power' => ['sometimes', 'required'],
+                'type_fuel' => ['sometimes', 'required'],
+                'transmition' => ['sometimes', 'required'],
+                'spesification' => ['sometimes', 'required'],
+                'address' => ['sometimes', 'required'],
+                'color' => ['sometimes', 'required'],
+                'width' => ['sometimes', 'required'],
+                'weight' => ['sometimes', 'required'],
+                'upholstery' => ['sometimes', 'required'],
+                'length' => ['sometimes', 'required'],
+                'height' => ['sometimes', 'required'],
+                'max_speed' => ['sometimes', 'required']
+            ];
+        }
     }
 }
