@@ -24,6 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/cars',[CarController::class,'index']);
 Route::get('/cars/{id}',[CarController::class,'show']);
 Route::post('/cars',[CarController::class,'store']);
+Route::put('/cars/{id}',[CarController::class,'update']);
+Route::patch('/cars/{id}',[CarController::class,'update']);
 
 //api car types
 Route::get('/types',[CarTypeController::class,'index']);
