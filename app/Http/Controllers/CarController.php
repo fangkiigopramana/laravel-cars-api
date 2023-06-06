@@ -78,9 +78,9 @@ class CarController extends Controller
      * @param  \App\Models\Car  $car
      * @return \Illuminate\Http\Response
      */
-    public function edit(Car $car)
+    public function edit(Car $id,)
     {
-        //
+        return $id;
     }
 
     /**
@@ -90,9 +90,9 @@ class CarController extends Controller
      * @param  \App\Models\Car  $car
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCarRequest $request, Car $car)
+    public function update(UpdateCarRequest $request, Car $id)
     {
-        return $car->update($request->all());
+        return $id->update($request->all());
     }
 
     /**
