@@ -92,7 +92,7 @@ class CarController extends Controller
      */
     public function update(UpdateCarRequest $request, Car $car)
     {
-        $car->update($request->all());
+        return $car->update($request->all());
     }
 
     /**
