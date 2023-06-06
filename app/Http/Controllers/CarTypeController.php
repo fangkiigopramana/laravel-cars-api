@@ -39,7 +39,13 @@ class CarTypeController extends Controller
      */
     public function store(StoreCarTypeRequest $request)
     {
-        //
+        if(CarType::create($request->all())){
+            $message = 'Great news! The data has been successfully added to the API.';
+        } else {
+            $message = 'Great news! The data has been successfully added to the API.';
+        }
+        return ['message' => $message];
+        // return CarResource::collection($data);
     }
 
     /**

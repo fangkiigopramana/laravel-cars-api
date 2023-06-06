@@ -26,7 +26,9 @@ Route::get('/cars/{id}',[CarController::class,'show']);
 Route::post('/cars',[CarController::class,'store']);
 Route::put('/cars/{id}',[CarController::class,'edit']);
 Route::patch('/cars/{id}',[CarController::class,'update']);
+Route::delete('/cars/{id}',[CarController::class,'destroy']);
 
 //api car types
 Route::get('/types',[CarTypeController::class,'index']);
 Route::get('/types/{id}',[CarTypeController::class,'show']);
+Route::post('/types',[CarTypeController::class,'store']);
